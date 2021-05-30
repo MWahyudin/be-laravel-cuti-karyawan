@@ -14,6 +14,11 @@ class AnnualLeaveResource extends JsonResource
      */
     public function toArray($request)
     {
-        return parent::toArray($request);
+        return [
+            'id' => $this->id,
+            'employee_name' => $this->employee->name,
+            'year' => $this->year->annual_leave_year,
+            'addeb_by' => $this->user
+        ];
     }
 }
