@@ -20,16 +20,7 @@ class AnnualLeaveController extends Controller
 {
     public function __construct()
     {
-        // $this->middleware(
-        //     [
-        //         'can:addAnnualLeaveEmployee,App\Models\User',
-        //         'can:accAnnualLeaveEmployee,App\Models\User',
-        //         'can:readRemainingLeave,App\Models\User',
-        //         'can:readRemainingLeaveEmployee,App\Models\User',
-        //         'can:leaveApplication,App\Models\User',
-        //         // 'can:addAnnualLeaveEmployee,App\Models\User'
-        //     ]
-        // );
+      
         $this->middleware('can:addAnnualLeaveEmployee,App\Models\User')->only('addAnnualLeaveEmployee');
         $this->middleware('can:accAnnualLeaveEmployee,App\Models\User')->only('accAnnualLeaveEmployee');
         $this->middleware('can:readRemainingLeave,App\Models\User')->only('readRemainingLeave');
