@@ -1,0 +1,4 @@
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/mwahyudi/apicuti.mwahyudin.info
+    - /usr/bin/rsync -Paz * $DEPLOYPATH --delete
